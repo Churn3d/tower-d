@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://djiobimeidm2f"]
+
+[ext_resource type="PackedScene" uid="uid://djx34h1tbdqic" path="res://cube_character_body_3d.tscn" id="1_5fw85"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_losg2"]
+
+[node name="World" type="Node3D"]
+
+[node name="Cube-CharacterBody3D" parent="." instance=ExtResource("1_5fw85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63714, 0.75771, 0)
+motion_mode = 0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.905569, 0.424199, 0, -0.424199, 0.905569, 1.1123, 1.79738, 5.15868)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.567746, -0.124833, 0.813684, -0.123665, 0.964285, 0.234224, -0.813862, -0.233604, 0.532032, 3.25569, 2.45273, 3.50573)
+light_energy = 11.276
+spot_range = 8.90313
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.782032, 0, 0.623238, 0, 1, 0, -0.623238, 0, 0.782032, 0, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_losg2")

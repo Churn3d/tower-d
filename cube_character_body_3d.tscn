@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://djx34h1tbdqic"]
+
+[ext_resource type="Script" path="res://Cube-CharacterBody3D.gd" id="1_dtwjb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_snsey"]
+
+[node name="Cube-CharacterBody3D" type="CharacterBody3D"]
+motion_mode = 1
+script = ExtResource("1_dtwjb")
+
+[node name="Cube-CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_snsey")
+
+[node name="Cube-CSGBox3D" type="CSGBox3D" parent="."]
